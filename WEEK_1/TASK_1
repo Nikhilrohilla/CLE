@@ -1,1 +1,117 @@
+# Week 1 – Task 1: MySQL Setup and NYC Taxi Data Loading
 
+## Objective
+
+Install and configure MySQL and Visual Studio Code (VS Code), establish a database connection, and load the NYC Yellow Taxi dataset into MySQL for SQL-based data analysis.
+
+## Tools and Technologies
+
+- **MySQL:** Relational database management system.
+- **MySQL Workbench:** Database management and administration.
+- **Visual Studio Code:** SQL development environment.
+- **SQLTools Extension:** Connect and execute SQL queries from VS Code.
+- **Dataset:** NYC Yellow Taxi Trip Data.
+- **SQL:** Database creation, data loading, and validation.
+
+## Project Setup
+
+### 1. Install MySQL
+
+- Install MySQL Server.
+- Configure the MySQL connection.
+- Install MySQL Workbench.
+- Verify that the MySQL server is running.
+
+### 2. Configure Visual Studio Code
+
+- Install Visual Studio Code.
+- Install the SQLTools extension.
+- Configure the MySQL connection using the server credentials.
+- Verify the database connection from VS Code.
+
+### 3. Create the Database
+
+Create a database named `NYC`.
+
+```sql
+CREATE DATABASE NYC;
+
+USE NYC;
+```
+
+### 4. Load the NYC Taxi Dataset
+
+Download the NYC Yellow Taxi dataset in CSV format.
+
+Load the dataset into MySQL and create a table named `yellow_tripdata`.
+
+The dataset contains taxi trip information, including:
+
+- Pickup and drop-off timestamps
+- Passenger count
+- Trip distance
+- Pickup and drop-off coordinates
+- Payment type
+- Fare amount
+- Tip amount
+- Total trip amount
+
+### 5. Verify Data Loading
+
+**Check available databases:**
+
+```sql
+SHOW DATABASES;
+```
+
+**Select the NYC database:**
+
+```sql
+USE NYC;
+```
+
+**Check available tables:**
+
+```sql
+SHOW TABLES;
+```
+
+**Inspect the table structure:**
+
+```sql
+DESCRIBE yellow_tripdata;
+```
+
+**Display the first 10 records:**
+
+```sql
+SELECT *
+FROM yellow_tripdata
+LIMIT 10;
+```
+
+**Count the total number of records:**
+
+```sql
+SELECT COUNT(*) AS total_records
+FROM yellow_tripdata;
+```
+
+## Expected Outcome
+
+- MySQL Server successfully installed and configured.
+- MySQL Workbench connected to the database.
+- VS Code connected to MySQL using SQLTools.
+- NYC database successfully created.
+- Yellow Taxi dataset loaded into the `yellow_tripdata` table.
+- Table structure and record count verified using SQL queries.
+
+## Learning Outcomes
+
+Through this task, I learned how to:
+
+1. Set up a MySQL database environment.
+2. Connect MySQL with VS Code.
+3. Load CSV-based data into a relational database.
+4. Inspect database schemas and table structures.
+5. Validate data loading using SQL queries.
